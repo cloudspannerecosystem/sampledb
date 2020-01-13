@@ -23,7 +23,7 @@ from google.cloud import spanner
 
 
 def is_bool_null(file):
-  # This function convertes the boolean values in the dataset from strings to
+  # This function converts the boolean values in the dataset from strings to
   # boolean data types. It also converts the string Null to a None data type
   # indicating an empty cell.
   data = list(csv.reader(file))
