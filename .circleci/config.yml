@@ -2,9 +2,8 @@
 #
 # Check https://circleci.com/docs/2.0/language-python/ for more details
 #
-version: 2
 jobs:
-  build:
+  build_and_test:
     docker:
       - image: circleci/python:3.6.1
 
@@ -13,7 +12,6 @@ jobs:
     steps:
       - checkout
 
-      # Download and cache dependencies
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "requirements.txt" }}
@@ -43,3 +41,21 @@ jobs:
           command: |
             . venv/bin/activate
             pytest
+
+workflows:
+  version: 2
+
+  commit:  # Run on every commit.
+    jobs:
+      - build_and_test
+
+  nightly:  # Run every night.
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                  - master
+    jobs:
+      - build_and_test
