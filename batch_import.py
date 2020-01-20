@@ -71,7 +71,8 @@ def main(instance_id, database_id):
   # Create the database.
   ddl_statements = open('schema.ddl', 'r').read().split(';')
   database = instance.database(database_id, ddl_statements=ddl_statements)
-  database.create().result()  # Wait for operation to complete.
+  create_op = database.create()
+  create_op.result()  # Wait for operation to complete.
 
   # File paths.
   comments_file = 'hnewscomments.csv'
