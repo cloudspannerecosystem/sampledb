@@ -7,6 +7,9 @@ The data contained in the CSV file is sourced from the "Hacker News - Y
 Combinator" BigQuery
 [public dataset](https://cloud.google.com/bigquery/public-data/).
 
+Please feel free to report issues and send pull requests, but note that this
+application is not officially supported as part of the Cloud Spanner product.
+
 ## Setup
 
 ### Create an instance
