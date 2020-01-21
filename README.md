@@ -1,4 +1,5 @@
 # SampleDB
+[![cloudspannerecosystem](https://circleci.com/gh/cloudspannerecosystem/sampledb.svg?style=svg)](https://circleci.com/gh/cloudspannerecosystem/sampledb)
 
 This application allows you to quickly get a sample database into Cloud Spanner.
 It does so by loading data from a CSV file into a Cloud Spanner database.
