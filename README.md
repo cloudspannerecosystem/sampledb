@@ -2,7 +2,7 @@
 [![cloudspannerecosystem](https://circleci.com/gh/cloudspannerecosystem/sampledb.svg?style=svg)](https://circleci.com/gh/cloudspannerecosystem/sampledb)
 
 This application allows you to quickly get a sample database into Cloud Spanner.
-It does so by loading data from a CSV file into a Cloud Spanner database.
+It does so by loading data from a CSV file into a new Cloud Spanner database.
 
 The data contained in the CSV file is sourced from the "Hacker News - Y
 Combinator" BigQuery
